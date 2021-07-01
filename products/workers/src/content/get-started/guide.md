@@ -12,7 +12,7 @@ Learn more about [how Workers works](/learning/how-workers-works).
 
 <Aside header="Try the Playground">
 
-The quickest way to experiment with Cloudflare Workers is in the [Playground](https://cloudflareworkers.com/#36ebe026bf3510a2e5acace89c09829f:about:blank). It doesn’t require _any_ setup. It’s just a simple, instant way to preview and test a Workers script directly in the browser against any site.
+The quickest way to experiment with Cloudflare Workers is in the [Playground](https://cloudflareworkers.com/#36ebe026bf3510a2e5acace89c09829f:about:blank). It doesn’t require _any_ setup. It is a simple, instant way to preview and test a Workers script directly in the browser against any site.
 
 </Aside>
 
@@ -20,7 +20,7 @@ The quickest way to experiment with Cloudflare Workers is in the [Playground](ht
 
 ## 1. Sign up for a Workers account
 
-Before you can start [publishing](/cli-wrangler/commands#publish) your Workers on your own domain or a free workers.dev subdomain, you’ll need to sign up for a Cloudflare Workers account.
+Before you can start [publishing](/cli-wrangler/commands#publish) your Workers on your own domain or a free workers.dev subdomain, you will be required to sign up for a Cloudflare Workers account.
 
 <p><Button type="primary" href="https://dash.cloudflare.com/sign-up/workers">Sign up</Button></p>
 
@@ -54,7 +54,7 @@ $ wrangler --version
 
 ## 3. Configure the Workers CLI
 
-Now that Wrangler is installed, you'll need to give it an API Token for your Cloudflare account.
+Now that Wrangler is installed, give it an API Token for your Cloudflare account.
 
 Run the command `wrangler login` and Wrangler will ask to automatically open your web browser to log into your Cloudflare account. If you are in an environment that doesn't have a GUI, you can copy and paste the url into a browser and log in.
 
