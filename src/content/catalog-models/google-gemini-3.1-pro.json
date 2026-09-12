@@ -1,0 +1,731 @@
+{
+	"model_id": "google/gemini-3.1-pro",
+	"provider_id": "google",
+	"name": "Gemini 3.1 Pro",
+	"description": "Google's most intelligent Gemini model with improved reasoning, a medium thinking level, and a 1M token context window.",
+	"task": "Text Generation",
+	"tags": [
+		"LLM",
+		"Reasoning",
+		"Multimodal",
+		"Thinking"
+	],
+	"context_length": 1000000,
+	"max_output_tokens": 65536,
+	"schema_version": "1.0.0",
+	"examples": [
+		{
+			"name": "Simple Question",
+			"description": "Basic generateContent request",
+			"input": {
+				"contents": [
+					{
+						"parts": [
+							{
+								"text": "What are the three laws of thermodynamics?"
+							}
+						],
+						"role": "user"
+					}
+				]
+			},
+			"output": {
+				"text": "The laws of thermodynamics are fundamental principles in physics that describe how energy moves, changes form, and interacts with matter in the universe. \n\nHere is a breakdown of the three laws (plus a \"bonus\" law) explained simply:\n\n### 1. The First Law: The Law of Conservation of Energy\n* **The Concept:** Energy cannot be created or destroyed; it can only be transferred or changed from one form to another. The total amount of energy in the universe is constant.\n* **In Simple Terms:** You can\u2019t get something for nothing. \n* **Everyday Example:** When you eat an apple, your body doesn't \"destroy\" the calories (chemical energy). It transforms them into kinetic energy (when you move) and thermal energy (body heat). Similarly, a lightbulb doesn't create light out of nowhere; it converts electrical energy into light and heat.\n\n### 2. The Second Law: The Law of Entropy\n* **The Concept:** The total **entropy** (a measure of disorder or randomness) of an isolated system always increases over time. Because of this, heat will always naturally flow from a hotter object to a colder one, never the reverse. Energy transfers are never 100% efficient; some energy is always lost as unusable heat.\n* **In Simple Terms:** Things naturally get messier over time, and you can't even \"break even\" when transferring energy.\n* **Everyday Example:** If you leave a hot cup of coffee on a table, it will eventually cool down until it matches room temperature. The heat spreads out and dissipates. You will never see a cold cup of coffee spontaneously absorb heat from the room and start boiling. \n\n### 3. The Third Law: Absolute Zero\n* **The Concept:** As the temperature of a system approaches **absolute zero** (0 Kelvin, or -273.15\u00b0C / -459.67\u00b0F), the entropy (disorder) of the system approaches a constant minimum. At absolute zero, all atomic and molecular movement essentially stops.\n* **In Simple Terms:** Things stop moving when it gets as cold as physically possible. \n* **Everyday Example:** It is practically impossible to reach absolute zero, but scientists use this law to understand how materials behave at extreme extremes. For instance, creating superconductors (materials with zero electrical resistance) requires cooling them to near absolute zero so that atomic vibrations don't interfere with the flow of electricity.\n\n---\n\n### *Bonus: The Zeroth Law*\nWait, a zeroth law? Yes! Scientists realized later that there was a foundational rule they assumed to be true but never formally stated. Because the 1st, 2nd, and 3rd laws were already established, they named this the \"Zeroth\" law so it would logically come first.\n* **The Concept:** If System A and System B are both the same temperature as System C, then System A and System B must be the same temperature as each other. (This law establishes the basis for how thermometers work!).\n\n---\n\n### The Famous \"Gambler's Analogy\"\nTo make these laws easy to remember, physicists sometimes summarize them like a rigged game of cosmic poker:\n* **1st Law:** You can't win; you can only break even. *(Energy is conserved).*\n* **2nd Law:** You can't even break even; you will always lose. *(Entropy increases; energy is lost as heat).*\n* **3rd Law:** You can't quit the game. *(You can never reach absolute zero).*"
+			},
+			"raw_response": {
+				"candidates": [
+					{
+						"content": {
+							"role": "model",
+							"parts": [
+								{
+									"text": "The laws of thermodynamics are fundamental principles in physics that describe how energy moves, changes form, and interacts with matter in the universe. \n\nHere is a breakdown of the three laws (plus a \"bonus\" law) explained simply:\n\n### 1. The First Law: The Law of Conservation of Energy\n* **The Concept:** Energy cannot be created or destroyed; it can only be transferred or changed from one form to another. The total amount of energy in the universe is constant.\n* **In Simple Terms:** You can\u2019t get something for nothing. \n* **Everyday Example:** When you eat an apple, your body doesn't \"destroy\" the calories (chemical energy). It transforms them into kinetic energy (when you move) and thermal energy (body heat). Similarly, a lightbulb doesn't create light out of nowhere; it converts electrical energy into light and heat.\n\n### 2. The Second Law: The Law of Entropy\n* **The Concept:** The total **entropy** (a measure of disorder or randomness) of an isolated system always increases over time. Because of this, heat will always naturally flow from a hotter object to a colder one, never the reverse. Energy transfers are never 100% efficient; some energy is always lost as unusable heat.\n* **In Simple Terms:** Things naturally get messier over time, and you can't even \"break even\" when transferring energy.\n* **Everyday Example:** If you leave a hot cup of coffee on a table, it will eventually cool down until it matches room temperature. The heat spreads out and dissipates. You will never see a cold cup of coffee spontaneously absorb heat from the room and start boiling. \n\n### 3. The Third Law: Absolute Zero\n* **The Concept:** As the temperature of a system approaches **absolute zero** (0 Kelvin, or -273.15\u00b0C / -459.67\u00b0F), the entropy (disorder) of the system approaches a constant minimum. At absolute zero, all atomic and molecular movement essentially stops.\n* **In Simple Terms:** Things stop moving when it gets as cold as physically possible. \n* **Everyday Example:** It is practically impossible to reach absolute zero, but scientists use this law to understand how materials behave at extreme extremes. For instance, creating superconductors (materials with zero electrical resistance) requires cooling them to near absolute zero so that atomic vibrations don't interfere with the flow of electricity.\n\n---\n\n### *Bonus: The Zeroth Law*\nWait, a zeroth law? Yes! Scientists realized later that there was a foundational rule they assumed to be true but never formally stated. Because the 1st, 2nd, and 3rd laws were already established, they named this the \"Zeroth\" law so it would logically come first.\n* **The Concept:** If System A and System B are both the same temperature as System C, then System A and System B must be the same temperature as each other. (This law establishes the basis for how thermometers work!).\n\n---\n\n### The Famous \"Gambler's Analogy\"\nTo make these laws easy to remember, physicists sometimes summarize them like a rigged game of cosmic poker:\n* **1st Law:** You can't win; you can only break even. *(Energy is conserved).*\n* **2nd Law:** You can't even break even; you will always lose. *(Entropy increases; energy is lost as heat).*\n* **3rd Law:** You can't quit the game. *(You can never reach absolute zero).*",
+									"thoughtSignature": "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"
+								}
+							]
+						},
+						"finishReason": "STOP"
+					}
+				],
+				"usageMetadata": {
+					"promptTokenCount": 8,
+					"candidatesTokenCount": 750,
+					"totalTokenCount": 1778,
+					"trafficType": "ON_DEMAND",
+					"promptTokensDetails": [
+						{
+							"modality": "TEXT",
+							"tokenCount": 8
+						}
+					],
+					"candidatesTokensDetails": [
+						{
+							"modality": "TEXT",
+							"tokenCount": 750
+						}
+					],
+					"thoughtsTokenCount": 1020
+				},
+				"modelVersion": "gemini-3.1-pro-preview",
+				"createTime": "2026-07-14T02:13:05.948743Z",
+				"responseId": "MZtVaof0Of-w3dAPzO-q6Qk",
+				"gatewayMetadata": {
+					"keySource": "Unified"
+				}
+			},
+			"code_snippets": [
+				{
+					"label": "typescript",
+					"language": "typescript",
+					"code": "const response = await env.AI.run(\n  'google/gemini-3.1-pro',\n  { contents: [{ parts: [{ text: 'What are the three laws of thermodynamics?' }], role: 'user' }] },\n)\nconsole.log(response)"
+				},
+				{
+					"label": "curl",
+					"language": "bash",
+					"code": "curl https://api.cloudflare.com/client/v4/accounts/$CLOUDFLARE_ACCOUNT_ID/ai/run \\\n  --header \"Authorization: Bearer $CLOUDFLARE_API_TOKEN\" \\\n  --header \"Content-Type: application/json\" \\\n  --data '{\n  \"model\": \"google/gemini-3.1-pro\",\n  \"input\": {\n    \"contents\": [\n      {\n        \"parts\": [\n          {\n            \"text\": \"What are the three laws of thermodynamics?\"\n          }\n        ],\n        \"role\": \"user\"\n      }\n    ]\n  }\n}'"
+				}
+			]
+		},
+		{
+			"name": "With System Instruction",
+			"description": "Using a system instruction to set context",
+			"input": {
+				"contents": [
+					{
+						"parts": [
+							{
+								"text": "How do I read a JSON file in Python?"
+							}
+						],
+						"role": "user"
+					}
+				],
+				"generationConfig": {
+					"temperature": 0.3
+				},
+				"systemInstruction": {
+					"parts": [
+						{
+							"text": "You are a helpful coding assistant specializing in Python."
+						}
+					]
+				}
+			},
+			"output": {
+				"text": "To read a JSON file in Python, you can use the built-in **`json`** module. \n\nHere is the standard and safest way to do it:\n\n```python\nimport json\n\n# Open the file in read mode\nwith open('data.json', 'r', encoding='utf-8') as file:\n    # Load the JSON data into a Python dictionary\n    data = json.load(file)\n\n# Now you can use 'data' like a normal Python dictionary\nprint(data)\n```\n\n### Breakdown of the code:\n1. **`import json`**: Imports Python's built-in JSON library.\n2. **`with open(...) as file:`**: This is the best practice for opening files. It ensures that the file is automatically closed after you are done with it, even if an error occurs.\n3. **`encoding='utf-8'`**: It is highly recommended to specify the encoding to prevent errors if your JSON file contains special characters or emojis.\n4. **`json.load(file)`**: This function reads the file and converts the JSON data into a Python object (usually a dictionary or a list).\n\n---\n\n### Best Practice: Adding Error Handling\nIf you are writing code for a real application, it's a good idea to handle potential errors, such as the file not existing or the JSON being formatted incorrectly:\n\n```python\nimport json\n\ntry:\n    with open('data.json', 'r', encoding='utf-8') as file:\n        data = json.load(file)\n        print(data)\n        \nexcept FileNotFoundError:\n    print(\"The file was not found.\")\nexcept json.JSONDecodeError:\n    print(\"The file does not contain valid JSON.\")\n```\n\n### \ud83d\udca1 Pro Tip: `load()` vs `loads()`\nIt is easy to confuse these two functions in the `json` module:\n* Use **`json.load()`** (no 's') when reading directly from a **file**.\n* Use **`json.loads()`** (with an 's' for **s**tring) when reading JSON data from a **Python string**."
+			},
+			"raw_response": {
+				"candidates": [
+					{
+						"content": {
+							"role": "model",
+							"parts": [
+								{
+									"text": "To read a JSON file in Python, you can use the built-in **`json`** module. \n\nHere is the standard and safest way to do it:\n\n```python\nimport json\n\n# Open the file in read mode\nwith open('data.json', 'r', encoding='utf-8') as file:\n    # Load the JSON data into a Python dictionary\n    data = json.load(file)\n\n# Now you can use 'data' like a normal Python dictionary\nprint(data)\n```\n\n### Breakdown of the code:\n1. **`import json`**: Imports Python's built-in JSON library.\n2. **`with open(...) as file:`**: This is the best practice for opening files. It ensures that the file is automatically closed after you are done with it, even if an error occurs.\n3. **`encoding='utf-8'`**: It is highly recommended to specify the encoding to prevent errors if your JSON file contains special characters or emojis.\n4. **`json.load(file)`**: This function reads the file and converts the JSON data into a Python object (usually a dictionary or a list).\n\n---\n\n### Best Practice: Adding Error Handling\nIf you are writing code for a real application, it's a good idea to handle potential errors, such as the file not existing or the JSON being formatted incorrectly:\n\n```python\nimport json\n\ntry:\n    with open('data.json', 'r', encoding='utf-8') as file:\n        data = json.load(file)\n        print(data)\n        \nexcept FileNotFoundError:\n    print(\"The file was not found.\")\nexcept json.JSONDecodeError:\n    print(\"The file does not contain valid JSON.\")\n```\n\n### \ud83d\udca1 Pro Tip: `load()` vs `loads()`\nIt is easy to confuse these two functions in the `json` module:\n* Use **`json.load()`** (no 's') when reading directly from a **file**.\n* Use **`json.loads()`** (with an 's' for **s**tring) when reading JSON data from a **Python string**.",
+									"thoughtSignature": "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"
+								}
+							]
+						},
+						"finishReason": "STOP"
+					}
+				],
+				"usageMetadata": {
+					"promptTokenCount": 20,
+					"candidatesTokenCount": 462,
+					"totalTokenCount": 1060,
+					"trafficType": "ON_DEMAND",
+					"promptTokensDetails": [
+						{
+							"modality": "TEXT",
+							"tokenCount": 20
+						}
+					],
+					"candidatesTokensDetails": [
+						{
+							"modality": "TEXT",
+							"tokenCount": 462
+						}
+					],
+					"thoughtsTokenCount": 578
+				},
+				"modelVersion": "gemini-3.1-pro-preview",
+				"createTime": "2026-07-14T02:13:22.321177Z",
+				"responseId": "QptVapnNE8WW3dAP2MmH4Aw",
+				"gatewayMetadata": {
+					"keySource": "Unified"
+				}
+			},
+			"code_snippets": [
+				{
+					"label": "typescript",
+					"language": "typescript",
+					"code": "const response = await env.AI.run(\n  'google/gemini-3.1-pro',\n  {\n    contents: [{ parts: [{ text: 'How do I read a JSON file in Python?' }], role: 'user' }],\n    generationConfig: { temperature: 0.3 },\n    systemInstruction: {\n      parts: [{ text: 'You are a helpful coding assistant specializing in Python.' }],\n    },\n  },\n)\nconsole.log(response)"
+				},
+				{
+					"label": "curl",
+					"language": "bash",
+					"code": "curl https://api.cloudflare.com/client/v4/accounts/$CLOUDFLARE_ACCOUNT_ID/ai/run \\\n  --header \"Authorization: Bearer $CLOUDFLARE_API_TOKEN\" \\\n  --header \"Content-Type: application/json\" \\\n  --data '{\n  \"model\": \"google/gemini-3.1-pro\",\n  \"input\": {\n    \"contents\": [\n      {\n        \"parts\": [\n          {\n            \"text\": \"How do I read a JSON file in Python?\"\n          }\n        ],\n        \"role\": \"user\"\n      }\n    ],\n    \"generationConfig\": {\n      \"temperature\": 0.3\n    },\n    \"systemInstruction\": {\n      \"parts\": [\n        {\n          \"text\": \"You are a helpful coding assistant specializing in Python.\"\n        }\n      ]\n    }\n  }\n}'"
+				}
+			]
+		},
+		{
+			"name": "Multi-turn Conversation",
+			"description": "Continuing a conversation with context",
+			"input": {
+				"contents": [
+					{
+						"parts": [
+							{
+								"text": "I need help planning a road trip from San Francisco to Los Angeles."
+							}
+						],
+						"role": "user"
+					},
+					{
+						"parts": [
+							{
+								"text": "I'd be happy to help! The drive is about 380 miles and takes roughly 5-6 hours. Would you like suggestions for scenic routes or interesting stops along the way?"
+							}
+						],
+						"role": "model"
+					},
+					{
+						"parts": [
+							{
+								"text": "Yes, what are some good places to stop?"
+							}
+						],
+						"role": "user"
+					}
+				],
+				"generationConfig": {
+					"maxOutputTokens": 2048
+				}
+			},
+			"output": {
+				"text": "The best places to stop really depend on which route you decide to take. The 5-6 hour drive I mentioned earlier is via the fastest route (Interstate 5), but if you have more time, the coastal routes are world-famous. \n\nHere are the three main routes and the best stops for each:\n\n**1. The Fast Route (Interstate 5)**\n*Time: ~5.5 to 6 hours (pure driving)*\nThis route cuts straight through the central valley. It's not very scenic, but it's efficient. \n*   **Harris Ranch (Coalinga):** About halfway between SF and LA, this is a famous steakhouse, BBQ spot, and hotel. It\u2019s the ultimate I-5 pit stop for a good meal.\n*   **Kettleman City:** A major rest area with tons of fast food options (including a popular In-N-Out Burger) and gas stations.\n*   **Tejon Ranch Outlets:** Located right before you hit the mountains into LA, it's a good place to stretch your legs, use the restroom, and do some shopping.\n\n**2. The Best of Both Worlds (US Highway 101)**\n*Time: ~6.5 to 7.5 hours (pure driving)*\nThis route rolls through beautiful farmland, oak hills, wine country, and touches the coast towards the end.\n*   **Paso Robles:** A fantastic halfway point. It\u2019s a slightly more laid-back (and affordable) wine country compared to Napa, with a great downtown square full of restaurants.\n*   **San Luis Obispo (SLO):** A charming college town. Stop by the famously quirky, hot-pink **Madonna Inn** for a slice of cake, or visit the historic downtown. \n*   **Santa Barbara:** Known as the \"American Riviera.\" It features gorgeous Spanish-style architecture, a beautiful palm-lined beach, and great seafood on Stearns Wharf. \n\n**3. The Ultimate Scenic Route (Highway 1 / Pacific Coast Highway)**\n*Time: 9-10+ hours (Best done over 2 days)*\nThis is the famous coastal drive. *(Note: Always check Caltrans for road closures before taking this route, as landslides occasionally close portions of the road in Big Sur).*\n*   **Monterey & Carmel-by-the-Sea:** Visit the world-class Monterey Bay Aquarium, drive the scenic \"17-Mile Drive,\" and grab coffee in the fairytale-like village of Carmel.\n*   **Big Sur:** The most dramatic coastline in the US. Must-stops include the **Bixby Creek Bridge** (you'll recognize it from a million photos) and **McWay Falls**, a waterfall that drops right onto the beach.\n*   **San Simeon:** Home to the extravagant **Hearst Castle** (book tickets in advance) and a massive, noisy, and entertaining Elephant Seal rookery right on the beach.\n*   **Morro Bay:** Famous for the massive \"Morro Rock\" sitting in the harbor. Great spot for clam chowder.\n\n**How to decide:**\n*   Are you trying to do this drive in a single day, or do you have time to stay overnight somewhere? \n*   What are you most interested in: beaches, food, wine, or weird roadside attractions? \n\nLet me know and we can narrow it down to the perfect itinerary!"
+			},
+			"raw_response": {
+				"candidates": [
+					{
+						"content": {
+							"role": "model",
+							"parts": [
+								{
+									"text": "The best places to stop really depend on which route you decide to take. The 5-6 hour drive I mentioned earlier is via the fastest route (Interstate 5), but if you have more time, the coastal routes are world-famous. \n\nHere are the three main routes and the best stops for each:\n\n**1. The Fast Route (Interstate 5)**\n*Time: ~5.5 to 6 hours (pure driving)*\nThis route cuts straight through the central valley. It's not very scenic, but it's efficient. \n*   **Harris Ranch (Coalinga):** About halfway between SF and LA, this is a famous steakhouse, BBQ spot, and hotel. It\u2019s the ultimate I-5 pit stop for a good meal.\n*   **Kettleman City:** A major rest area with tons of fast food options (including a popular In-N-Out Burger) and gas stations.\n*   **Tejon Ranch Outlets:** Located right before you hit the mountains into LA, it's a good place to stretch your legs, use the restroom, and do some shopping.\n\n**2. The Best of Both Worlds (US Highway 101)**\n*Time: ~6.5 to 7.5 hours (pure driving)*\nThis route rolls through beautiful farmland, oak hills, wine country, and touches the coast towards the end.\n*   **Paso Robles:** A fantastic halfway point. It\u2019s a slightly more laid-back (and affordable) wine country compared to Napa, with a great downtown square full of restaurants.\n*   **San Luis Obispo (SLO):** A charming college town. Stop by the famously quirky, hot-pink **Madonna Inn** for a slice of cake, or visit the historic downtown. \n*   **Santa Barbara:** Known as the \"American Riviera.\" It features gorgeous Spanish-style architecture, a beautiful palm-lined beach, and great seafood on Stearns Wharf. \n\n**3. The Ultimate Scenic Route (Highway 1 / Pacific Coast Highway)**\n*Time: 9-10+ hours (Best done over 2 days)*\nThis is the famous coastal drive. *(Note: Always check Caltrans for road closures before taking this route, as landslides occasionally close portions of the road in Big Sur).*\n*   **Monterey & Carmel-by-the-Sea:** Visit the world-class Monterey Bay Aquarium, drive the scenic \"17-Mile Drive,\" and grab coffee in the fairytale-like village of Carmel.\n*   **Big Sur:** The most dramatic coastline in the US. Must-stops include the **Bixby Creek Bridge** (you'll recognize it from a million photos) and **McWay Falls**, a waterfall that drops right onto the beach.\n*   **San Simeon:** Home to the extravagant **Hearst Castle** (book tickets in advance) and a massive, noisy, and entertaining Elephant Seal rookery right on the beach.\n*   **Morro Bay:** Famous for the massive \"Morro Rock\" sitting in the harbor. Great spot for clam chowder.\n\n**How to decide:**\n*   Are you trying to do this drive in a single day, or do you have time to stay overnight somewhere? \n*   What are you most interested in: beaches, food, wine, or weird roadside attractions? \n\nLet me know and we can narrow it down to the perfect itinerary!",
+									"thoughtSignature": "AY89a18mpueAH0ufyXN4NhH9ESNaVR39mazkibsTbHc4Pxpwg0or4AWocZ2AoAlLwVfkoLvFFoiIYlLDokQ+EaNg2ZseRkBeKDOfcsh17EK/fvsVwMAju8ZeMOiha4xVEEA7pjzNAZdgrhEmAOHq1hJhQPAn+uINexn1m7PXX8tcJe+QKAvsAndYxhpQfAOuxxT2pFtM48sN+wzvBpWcJ0FYhLGwLuBQHg1IrpMV2pJn9C8Cx+fXn40VoOIJm/zcRtTLm4rJbwvGWDaJtGjoEO6Jf/+C0pTGQH/IqGGn4PuGaB3BsYl2Umyxw2hsQ2++dl70ZaJpv5TkrSYBS0Us2eR19Llu5M4ZuuShYkrF+a3gr4d1hd6FrW8aCIrtuHZHSJYyzdqRbaUrThL+lUWfiStjTUE334vTvIwOjRJ7P3uoM/i91l8i/jHoWZZV2XU52AExO5wAovlpuTrFFaaKVRG0cG+ATC9zMLHQkjsbJz+cfYgtQHota519R8bYdavLHahJqS/B+VUDXJLRbuh3kwNcNLzzgcnaD3Ib2CbrXH3hE7OaDM5w61iGNLtUNsYzqnzPy+RR4XEng6OibLCX+lgaj4QIpJn25i4Q+MxyYVfH5vKa/dVk7OhJJMVVVjgZyAjdDW/K+2hoS/RgImJJVSOBECh2vbuNnYouzmgvQTjFAr955zJAFOoz0cXqPd2x9YgGvpjRJhGOPtLNQcImxBgbujyCAGNsGCdobRo7NHJoXNuEiGrU2hr9646g2oFGAsD43/9M3munqSpx0fH7+5qKXn7dcYC278fAfs881m3gOIb9/a9ZHzaFd94VA8i4rG7zuPVEviJry9aoL+g8pJdLt0490Zcm1Z6gYG9m28bctn8hONdwtrKO8Tu0I7fuI5liJDcHYyvbUQa9GcCc37uZJGGBF30vdc4M53HnDrAMGlH0g2w8+Jwusukd+DeeHlP1mOKnR3so12fnzmaAFZuRijMTrrQ1ILa2Gx1OZ43HKEH3jv9wHWp7T8EuggSq7r/uKLDa6agpUmNcGyTBOlO6l/H85FVSQvDlnG6H2a1Cyu9F/FNWZpOBMO7nlBDC+hU6ePtbFF+exXvOm4QkiPiW/TyYu7DhetYtEs2uLzY9qdi7vnobSpuLAiOq2ttTFQRvxyTHi1C+BMdZOAph+0x08S4ztRGLFfEEnAuZbVKZIq297dP5jhUscpKCTtV+9eFvwk71SvQ81JsTr1Y8ky7IkDGVlylrO5HEV6sIS8zCTbNZc38/Q+U2vnEg1ASIDIveqLPsDej+/bzpU1KZTMb3arS34CHrwEXZnpgUEEHiKIHpj0BBKL5Bkhj2lGzD7A59/HWlhYmbYNS5Qpc7sG/M1aO7zU8v0I6OwzHrrrJkLTZ1/TKt6UdGi7Ei2eVCT+SD/wnQ75gp5YlmlnNpAr23vzgF9pf5B7tnsKqLHelPXHf90w3ssocrAEPZwDWMiHUkXObKlo1lg/yzJq1WqgVBwgclv1XkNGXmM8oXrOVEHsAAnrg0twyQsHD/pFPQtyCujSP+CL5nv4RFWPW3sXKvZB8eEgMKkti9l02tPEQ4qgj8qAmppmWP+n4ZMS/MMK0Eeuq89Xoy/Wh1ygmj5YExWbkGSbAwOkU3gIgz7vtG+24mxZ7pLyCsh6weHSk/T4QHIAqcVXNY8jxn1w668cCSKZcnsidzjDicGaSUBeB/xQ/6zftWKfQt/kyXpGkB0XTPXAdcwED+y6SjNPD3UHDvy/hO22iwv7VRi2V9LGirls+A9NGGzND+maoBvcJZ/TTWlELJMd6WfgMUe7Cl5kP2/yPw7fLbA9TQxh2MwqHuJBtWxTWcQ1jd2AWbnKCw4Mw5RVnX3FP60PBROAFOHzbzbLj5eSZA1OC6xYgzn5tYzFpQDEoa8GY+/+nPmtN3INhOp3vddTC57xmg9O3Gt8lOxizmq1gbntz+5FGPFivN/ozz/FitJ75ytym+4BASEcs46CbO75/aFlfY8qVnK2ojGTUAXeNMCdpQ+Wwh6BxwrHAsk6/CQk8nFsEySxe4Jubq4Kv4eqst1+/l+hKWUDYHo9bWRVw92BbAEtOfqOXU4AFdZpgNjfB0wfHka5VrUn4BWIMPvFfn2X3kQ9xpaXS7sJ7KhG17uRTcXaaz9L/F0vTrw+o+lxMC5CzLs06TbulkrtsLNOzsytJ9glmAeTYiG1NeL++AT//tNqTe6coRkab69MUh3xRMPcAgvhxGMPVqu7VJ4ADvz9ps8doCsUQbwIHnQHO2V/jLgs20wgxkmfcnAR7QxLr4nHSoiZQbqe8MY8BacMd1L4fesyTEK3bof53Gvs+uvzGAlWjMQQfCrLVxZzXPcfWZIGzd/4ZZbSKvSEeb1vzcELItng1tiZa6sYrEr1hsS9RnYjGCdnJeTJL4Igm6bjUDXi6yMWyoUSUUowpGRGvuf8Ut7g2zhPU097wTvgDFTJBAAjKnUypeZ5T69z3CoFQFgl2HOvEsBiCtH2mFtECgbdPG5Uqc8D/gW8Y/9YJuocQL2CU12gTFpGzMgMnGabhlQ9UsPlRxlFaoO4T3wwVAwQHb2kfC3JcPbYtI641IoGAlWHBER8S5jOaGcYBxMCx1z/GtWcDK65HJrSC5FJclJS6pknxdzoQM5p5L4//0ISWcO0cSXsTluv49hkbwY0try+8dXpWv+j9fl7zjq56iaCExnuX+u/QBXwuXRj0UNqAIsD4j/SB+2f6DaHM40LCs/MI+l5ZgugXuP4FdzZ4SvRhc/Ewkvm7DNtZdQbFTq9XbWN6udp4z96uxbkTvAnmGfruQn7B/0WYnPerEL+7rIX4HE+/tKOIa6ZNuK1SVF7oy/dpCb/vj7/UJ2cF2Y7nKfc9mXFnVW4l9JinanllXeppq8xExLngX/puCvIDwpDR+nVJnsPY3pRru5QYsPSmwff+CDu+/zG7DdOjri5/+V/gMfOSOnKu7G/arOdVDCxwJrILSD3exfK7LZ67Ppnaahqk9GMiHtRGOwZ17VBPtvmHokltDOq3W8R/Oh0YF52Hb/HtrVpTeYDTwSJNhvpaFgFJ2OaWqtFO5u81NiYrldHK6O7dX7Pgb7q5/dtM7piVw8CExMeqsxtQhIbIwJG7BdSgaCSDC9YNs8pFXodZFunnNkMj72k5qUNd1BHXfUG3ZacCycSArNDtsLFk1SocUWkQI/5dhdZhqdXDYeYxxR/odoXQI8Br1sZQgfFNGQ+nUu/+DeKyyyh5yAW5NUAHgi7DCVdyp9AMOIqygWZLNN/sLFP/6I1A3ghJWftQ+ZLu6e7nhGg7/xLOh62T3Nhbi2Nqg30cFihH1+wNIpWf7vshSwcPoJEgCdTjL+umkYblsQrWojD6AjiTsE724ujwo4o3syf9j6OYL6rb7MUUMPagmdELTA+mwpqOX/9xXS9mwtEOwqpDZtoyg0CIUwyqfxIhfmkr5bXo4p6Ej16FnZbScm1unLYaEBAlJboD6lMFnsM5GBgXakVbFECL93X094Du8tkhohMKXUW+EwRwMr3Righ9PrVMGDEBXh8zNc7CJP6eIySXiy8dyz85XuPBov5PzEhc/jk6y044JCpRMXH/Yb2uXcMgQSouE1kOTE83BElaz+bATAJNKD7GVWJneoWvObxfzqsTZr5PWxYsoHitvBuWSMOME0lw7RWhUsFW40qDqhmiDcuVdEp/3BWI8AE1jVGtiqnudhfoIKXcnKjWf/eqg9INwanUGkXeC1RvLS1HN4B3DMqu/ggN4tgAK1pe1Km4Equ/Pa5PDyR0cFEWdk1qlAI00/g7t35TXUpQBtbb/ffDQ0IXpDNfGWJyGUB90TG4961MZ5tFN4NE7fQ+h3FHRiAto4zlsJ8VqKcHi78sw5MtYiAYqG1qLp9CUv7eBGyMI/Dn/UwJaHMyMQvHBJvfhvaavbQn4F3uDaJXARfsJs+0kSi5X+IJm2IRvGg85rb2TwD8Zm71qing1jMxpNCWsm01jlrryxvcdKkwGDSvmd7aPrKB4Sk1NVolll9OaOdjjHYQ/9xZIj3oyxQWl8T8Q2tScCeb9T9N9qax5OVLXO6BKEvQE3DC6PixRQmu2mgKJdzkiVfs+5WD2AzoQyQqRadhTSvjtTBic2voWEy7o4CnifQgvE34Rt+T8w7xwnglidIJxbIEVxCxXklmYoR0M4UUEHFR5GZ/2EmBdL1kfbSvzyF9yi5mqJTtGd+e6R6rywf1Sjg4IVykEZRij7B9ng8V/p96a32BY9D+ydJ25cFzMKlg/HY8HzFsOQ23KZ7hbCFhRJ7oxF2ebvKVTM2VwviIryOPKjNkEB+Idbty7JfQ2n5gjKdOrSz3eMElU45uikR5X8Q/JbEeTN6yb2bVW3t0a1y4jXa1q4p3hQS6du6r2aKGWo9UsXDkjpI2lqNcNmymv+vo9V8o3QeJ8zGXq5c5XikmPjrQ4bEPhoED4wkgt0blkFWvciCnBH7K+U7pwn30Gofsa7r0ge+QUpPwKT26pQS2zATMXQxsL19qVpCEA1hjO0R4u8+Qwuy7ldd3LfGvUyuo5AUIYWnp8iyV0Wqc9ONp6EamlL9G7lkvq1hoejlW8gUgdWhFAKSTbD3587sR3oSuJS0QQb7FQk9XHBDsNjqqTWlwrHQp1xXjg6hkI2gRSLIZNxge1B4UhZv6tRCtbYKeU"
+								}
+							]
+						},
+						"finishReason": "STOP"
+					}
+				],
+				"usageMetadata": {
+					"promptTokenCount": 64,
+					"candidatesTokenCount": 725,
+					"totalTokenCount": 1726,
+					"trafficType": "ON_DEMAND",
+					"promptTokensDetails": [
+						{
+							"modality": "TEXT",
+							"tokenCount": 64
+						}
+					],
+					"candidatesTokensDetails": [
+						{
+							"modality": "TEXT",
+							"tokenCount": 725
+						}
+					],
+					"thoughtsTokenCount": 937
+				},
+				"modelVersion": "gemini-3.1-pro-preview",
+				"createTime": "2026-07-14T02:13:32.346531Z",
+				"responseId": "TJtVaqOTFYSNu-gPqLui2AY",
+				"gatewayMetadata": {
+					"keySource": "Unified"
+				}
+			},
+			"code_snippets": [
+				{
+					"label": "typescript",
+					"language": "typescript",
+					"code": "const response = await env.AI.run(\n  'google/gemini-3.1-pro',\n  {\n    contents: [\n      {\n        parts: [{ text: 'I need help planning a road trip from San Francisco to Los Angeles.' }],\n        role: 'user',\n      },\n      {\n        parts: [\n          {\n            text: \"I'd be happy to help! The drive is about 380 miles and takes roughly 5-6 hours. Would you like suggestions for scenic routes or interesting stops along the way?\",\n          },\n        ],\n        role: 'model',\n      },\n      { parts: [{ text: 'Yes, what are some good places to stop?' }], role: 'user' },\n    ],\n    generationConfig: { maxOutputTokens: 2048 },\n  },\n)\nconsole.log(response)"
+				},
+				{
+					"label": "curl",
+					"language": "bash",
+					"code": "curl https://api.cloudflare.com/client/v4/accounts/$CLOUDFLARE_ACCOUNT_ID/ai/run \\\n  --header \"Authorization: Bearer $CLOUDFLARE_API_TOKEN\" \\\n  --header \"Content-Type: application/json\" \\\n  --data '{\n  \"model\": \"google/gemini-3.1-pro\",\n  \"input\": {\n    \"contents\": [\n      {\n        \"parts\": [\n          {\n            \"text\": \"I need help planning a road trip from San Francisco to Los Angeles.\"\n          }\n        ],\n        \"role\": \"user\"\n      },\n      {\n        \"parts\": [\n          {\n            \"text\": \"I'\\''d be happy to help! The drive is about 380 miles and takes roughly 5-6 hours. Would you like suggestions for scenic routes or interesting stops along the way?\"\n          }\n        ],\n        \"role\": \"model\"\n      },\n      {\n        \"parts\": [\n          {\n            \"text\": \"Yes, what are some good places to stop?\"\n          }\n        ],\n        \"role\": \"user\"\n      }\n    ],\n    \"generationConfig\": {\n      \"maxOutputTokens\": 2048\n    }\n  }\n}'"
+				}
+			]
+		},
+		{
+			"name": "Creative Writing",
+			"description": "Higher temperature for creative output",
+			"input": {
+				"contents": [
+					{
+						"parts": [
+							{
+								"text": "Write a short story opening about a detective finding an unusual clue."
+							}
+						],
+						"role": "user"
+					}
+				],
+				"generationConfig": {
+					"maxOutputTokens": 1500,
+					"temperature": 0.8
+				}
+			},
+			"error": {
+				"kind": "runner-failure",
+				"message": "normalizer returned empty output -- check modality vs response shape, or recapture",
+				"timestamp": "2026-07-14T02:14:05.609Z"
+			},
+			"code_snippets": [
+				{
+					"label": "typescript",
+					"language": "typescript",
+					"code": "const response = await env.AI.run(\n  'google/gemini-3.1-pro',\n  {\n    contents: [\n      {\n        parts: [{ text: 'Write a short story opening about a detective finding an unusual clue.' }],\n        role: 'user',\n      },\n    ],\n    generationConfig: { maxOutputTokens: 1500, temperature: 0.8 },\n  },\n)\nconsole.log(response)"
+				},
+				{
+					"label": "curl",
+					"language": "bash",
+					"code": "curl https://api.cloudflare.com/client/v4/accounts/$CLOUDFLARE_ACCOUNT_ID/ai/run \\\n  --header \"Authorization: Bearer $CLOUDFLARE_API_TOKEN\" \\\n  --header \"Content-Type: application/json\" \\\n  --data '{\n  \"model\": \"google/gemini-3.1-pro\",\n  \"input\": {\n    \"contents\": [\n      {\n        \"parts\": [\n          {\n            \"text\": \"Write a short story opening about a detective finding an unusual clue.\"\n          }\n        ],\n        \"role\": \"user\"\n      }\n    ],\n    \"generationConfig\": {\n      \"maxOutputTokens\": 1500,\n      \"temperature\": 0.8\n    }\n  }\n}'"
+				}
+			]
+		}
+	],
+	"default_example": null,
+	"code_snippets": [],
+	"supports_async": false,
+	"zdr": true,
+	"zdr_comment": null,
+	"external_info": "https://deepmind.google/technologies/gemini/",
+	"terms": "https://ai.google.dev/gemini-api/terms",
+	"cover_image_url": "https://pub-26f1392c1b674324be6786695bd72257.r2.dev/google/gemini-3.1-pro.png",
+	"metadata": {
+		"Architecture": "Transformer (multimodal)",
+		"Thinking": "Yes (medium level)"
+	},
+	"request_formats": [
+		"chat-completions"
+	],
+	"providers": null,
+	"banner": null,
+	"created_at": "2026-05-22 17:53:11",
+	"schema": {
+		"input": {
+			"$schema": "https://json-schema.org/draft/2020-12/schema",
+			"oneOf": [
+				{
+					"type": "object",
+					"properties": {
+						"contents": {
+							"type": "array",
+							"items": {
+								"type": "object",
+								"properties": {
+									"role": {
+										"type": "string",
+										"enum": [
+											"user",
+											"model"
+										]
+									},
+									"parts": {
+										"type": "array",
+										"items": {
+											"type": "object",
+											"properties": {
+												"text": {
+													"type": "string"
+												}
+											},
+											"additionalProperties": {}
+										}
+									}
+								},
+								"required": [
+									"parts"
+								],
+								"additionalProperties": {}
+							}
+						},
+						"systemInstruction": {
+							"type": "object",
+							"properties": {
+								"parts": {
+									"type": "array",
+									"items": {
+										"type": "object",
+										"properties": {
+											"text": {
+												"type": "string"
+											}
+										},
+										"additionalProperties": {}
+									}
+								}
+							},
+							"required": [
+								"parts"
+							],
+							"additionalProperties": {}
+						},
+						"generationConfig": {
+							"type": "object",
+							"properties": {
+								"temperature": {
+									"type": "number"
+								},
+								"topP": {
+									"type": "number"
+								},
+								"topK": {
+									"type": "number"
+								},
+								"maxOutputTokens": {
+									"type": "number"
+								},
+								"candidateCount": {
+									"type": "number"
+								},
+								"stopSequences": {
+									"type": "array",
+									"items": {
+										"type": "string"
+									}
+								},
+								"responseMimeType": {
+									"type": "string"
+								}
+							},
+							"additionalProperties": {}
+						},
+						"safetySettings": {
+							"type": "array",
+							"items": {
+								"type": "object",
+								"properties": {
+									"category": {
+										"type": "string"
+									},
+									"threshold": {
+										"type": "string"
+									}
+								},
+								"required": [
+									"category",
+									"threshold"
+								],
+								"additionalProperties": {}
+							}
+						},
+						"tools": {
+							"type": "array",
+							"items": {}
+						},
+						"toolConfig": {}
+					},
+					"required": [
+						"contents"
+					],
+					"additionalProperties": {},
+					"title": "Generate Content"
+				},
+				{
+					"type": "object",
+					"properties": {
+						"messages": {
+							"type": "array",
+							"items": {
+								"type": "object",
+								"properties": {
+									"role": {
+										"type": "string",
+										"enum": [
+											"system",
+											"developer",
+											"user",
+											"assistant",
+											"tool"
+										]
+									},
+									"content": {
+										"anyOf": [
+											{
+												"type": "string"
+											},
+											{
+												"type": "null"
+											},
+											{
+												"type": "array",
+												"items": {}
+											}
+										]
+									}
+								},
+								"required": [
+									"role",
+									"content"
+								],
+								"additionalProperties": {}
+							}
+						},
+						"temperature": {
+							"type": "number",
+							"minimum": 0,
+							"maximum": 2
+						},
+						"max_tokens": {
+							"type": "number",
+							"exclusiveMinimum": 0
+						},
+						"max_completion_tokens": {
+							"type": "number",
+							"exclusiveMinimum": 0
+						},
+						"top_p": {
+							"type": "number",
+							"minimum": 0,
+							"maximum": 1
+						},
+						"frequency_penalty": {
+							"type": "number",
+							"minimum": -2,
+							"maximum": 2
+						},
+						"presence_penalty": {
+							"type": "number",
+							"minimum": -2,
+							"maximum": 2
+						},
+						"stream": {
+							"type": "boolean"
+						},
+						"stream_options": {
+							"type": "object",
+							"properties": {
+								"include_usage": {
+									"type": "boolean"
+								}
+							},
+							"additionalProperties": false
+						},
+						"tools": {
+							"type": "array",
+							"items": {}
+						},
+						"tool_choice": {},
+						"response_format": {},
+						"modalities": {
+							"type": "array",
+							"items": {
+								"type": "string",
+								"enum": [
+									"text",
+									"audio"
+								]
+							}
+						},
+						"audio": {
+							"type": "object",
+							"properties": {
+								"voice": {
+									"type": "string",
+									"enum": [
+										"alloy",
+										"ash",
+										"ballad",
+										"coral",
+										"echo",
+										"sage",
+										"shimmer",
+										"verse"
+									]
+								},
+								"format": {
+									"type": "string",
+									"enum": [
+										"wav",
+										"mp3",
+										"flac",
+										"opus",
+										"pcm16"
+									]
+								}
+							},
+							"additionalProperties": false
+						}
+					},
+					"required": [
+						"messages"
+					],
+					"additionalProperties": {},
+					"title": "Chat Completions"
+				}
+			]
+		},
+		"output": {
+			"$schema": "https://json-schema.org/draft/2020-12/schema",
+			"oneOf": [
+				{
+					"type": "object",
+					"properties": {
+						"candidates": {
+							"type": "array",
+							"items": {}
+						},
+						"usageMetadata": {
+							"type": "object",
+							"properties": {
+								"promptTokenCount": {
+									"type": "number"
+								},
+								"candidatesTokenCount": {
+									"type": "number"
+								},
+								"totalTokenCount": {
+									"type": "number"
+								}
+							},
+							"additionalProperties": {}
+						},
+						"modelVersion": {
+							"type": "string"
+						}
+					},
+					"additionalProperties": {},
+					"title": "Generate Content"
+				},
+				{
+					"type": "object",
+					"properties": {
+						"id": {
+							"type": "string"
+						},
+						"object": {
+							"type": "string"
+						},
+						"created": {
+							"type": "number"
+						},
+						"model": {
+							"type": "string"
+						},
+						"choices": {
+							"type": "array",
+							"items": {
+								"type": "object",
+								"properties": {
+									"index": {
+										"type": "number"
+									},
+									"message": {
+										"type": "object",
+										"properties": {
+											"role": {
+												"type": "string"
+											},
+											"content": {
+												"anyOf": [
+													{
+														"type": "string"
+													},
+													{
+														"type": "null"
+													}
+												]
+											},
+											"tool_calls": {
+												"anyOf": [
+													{
+														"type": "array",
+														"items": {}
+													},
+													{
+														"type": "null"
+													}
+												]
+											},
+											"audio": {
+												"type": "object",
+												"properties": {
+													"id": {
+														"type": "string"
+													},
+													"data": {
+														"type": "string"
+													},
+													"expires_at": {
+														"type": "number"
+													},
+													"transcript": {
+														"type": "string"
+													}
+												},
+												"additionalProperties": {}
+											}
+										},
+										"required": [
+											"role"
+										],
+										"additionalProperties": {}
+									},
+									"finish_reason": {
+										"anyOf": [
+											{
+												"type": "string"
+											},
+											{
+												"type": "null"
+											}
+										]
+									}
+								},
+								"required": [
+									"index",
+									"message",
+									"finish_reason"
+								],
+								"additionalProperties": {}
+							}
+						},
+						"usage": {
+							"type": "object",
+							"properties": {
+								"prompt_tokens": {
+									"type": "number"
+								},
+								"completion_tokens": {
+									"type": "number"
+								},
+								"total_tokens": {
+									"type": "number"
+								}
+							},
+							"required": [
+								"prompt_tokens",
+								"completion_tokens",
+								"total_tokens"
+							],
+							"additionalProperties": {}
+						}
+					},
+					"required": [
+						"id",
+						"object",
+						"created",
+						"model",
+						"choices"
+					],
+					"additionalProperties": {},
+					"title": "Chat Completions"
+				}
+			]
+		}
+	}
+}

@@ -1,0 +1,9 @@
+---
+link: "/realtime/realtimekit/release-notes/flutter-ui-kit/"
+productName: RealtimeKit Flutter UI Kit
+productLink: "/realtime/realtimekit/"
+entries:
+  - publish_date: "2026-08-07"
+    title: RealtimeKit Flutter UI Kit discontinued
+    description: |-
+      The RealtimeKit Flutter SDKs have been discontinued

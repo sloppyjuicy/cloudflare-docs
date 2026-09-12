@@ -1,0 +1,209 @@
+---
+title: Containers
+description: Run serverless containers alongside Workers to handle resource-intensive workloads, custom runtimes, and existing container images on Cloudflare.
+order: 0
+
+pcx_content_type: overview
+sidebar:
+  order: 1
+head:
+  - tag: title
+    content: Overview
+products:
+  - containers
+---
+
+import {
+	CardGrid,
+	Description,
+	Feature,
+	LinkTitleCard,
+	Plan,
+	TabItem,
+	Tabs,
+	WranglerConfig,
+	LinkButton,
+} from "~/components";
+
+<Description>
+
+Enhance your Workers with serverless containers
+
+</Description>
+
+<Plan type="workers-paid" />
+
+Run code written in any programming language, built for any runtime, as part of apps built on [Workers](/workers).
+
+Deploy your container image to `Region:Earth` without worrying about managing infrastructure - just define your
+Worker and [`wrangler deploy`](/workers/wrangler/commands/general/#deploy).
+
+With Containers you can run:
+
+- Resource-intensive applications that require CPU cores running in parallel, large amounts of memory or disk space
+- Applications and libraries that require a full filesystem, specific runtime, or Linux-like environment
+- Existing applications and tools that have been distributed as container images
+
+Container instances are spun up on-demand and controlled by code you write in your [Worker](/workers). Instead of chaining together API calls or writing Kubernetes operators, you just write JavaScript:
+
+<Tabs>
+	<TabItem label="Worker Code">
+		```js
+		import { Container, getContainer } from "@cloudflare/containers";
+
+    	export class MyContainer extends Container {
+    		defaultPort = 4000; // Port the container is listening on
+    		sleepAfter = "10m"; // Stop the instance if requests not sent for 10 minutes
+    	}
+
+    	export default {
+    		async fetch(request, env) {
+    			const { "session-id": sessionId } = await request.json();
+    			// Get the container instance for the given session ID
+    			const containerInstance = getContainer(env.MY_CONTAINER, sessionId);
+    			// Pass the request to the container instance on its default port
+    			return containerInstance.fetch(request);
+    		},
+    	};
+    	```
+    </TabItem>
+    <TabItem label="Worker Config">
+    	<WranglerConfig>
+    		```json
+    		{
+    			"name": "container-starter",
+    			"main": "src/index.js",
+    			"compatibility_date": "$today",
+    			"containers": [
+    				{
+    					"class_name": "MyContainer",
+    					"image": "./Dockerfile",
+    					"max_instances": 5
+    				}
+    			],
+    			"durable_objects": {
+    				"bindings": [
+    					{
+    						"class_name": "MyContainer",
+    						"name": "MY_CONTAINER"
+    					}
+    				]
+    			},
+    			"migrations": [
+    				{
+    					"new_sqlite_classes": ["MyContainer"],
+    					"tag": "v1"
+    				}
+    			]
+    		}
+    		```
+    	</WranglerConfig>
+    </TabItem>
+
+</Tabs>
+
+<LinkButton variant="primary" href="/containers/get-started/">
+	Get started
+</LinkButton>
+<LinkButton
+	variant="secondary"
+	href="https://dash.cloudflare.com/?to=/:account/workers/containers"
+>
+	Containers dashboard
+</LinkButton>
+
+---
+
+## Next steps
+
+<Feature header="Get started" href="/containers/get-started/" cta="Deploy a Container">
+
+Build and push an image, call a Container from a Worker, and try scaling and routing.
+
+</Feature>
+
+<Feature header="Examples" href="/containers/examples/" cta="See Examples">
+
+Stateless and stateful routing, regional placement, Workflow and Queue integrations, AI-generated code execution, and short-lived workloads.
+
+</Feature>
+
+<Feature header="Local development" href="/containers/guides/local-dev/" cta="Develop locally">
+
+Run your Worker and container together with `wrangler dev` or `vite dev` before you deploy.
+
+</Feature>
+
+<Feature header="Deploy" href="/containers/guides/deploy/" cta="Deploy Containers">
+
+Ship from your machine or Workers Builds, and confirm the deploy.
+
+</Feature>
+
+---
+
+## More resources
+
+<CardGrid>
+
+<LinkTitleCard
+	title="Rollouts"
+	href="/containers/configuration/rollouts/"
+	icon="clock"
+>
+	How container instances update after you deploy.
+</LinkTitleCard>
+
+<LinkTitleCard
+	title="Image management"
+	href="/containers/guides/image-management/"
+	icon="seti:docker"
+>
+	Build, push, and pull images for Containers.
+</LinkTitleCard>
+
+<LinkTitleCard
+	title="Lifecycle of a Container"
+	href="/containers/concepts/architecture/"
+	icon="rocket"
+>
+	How a container is scheduled, started, routed, and shut down.
+</LinkTitleCard>
+
+<LinkTitleCard
+	title="Limits"
+	href="/containers/platform/limits/"
+	icon="error"
+>
+	Instance counts, image size, and other platform limits.
+</LinkTitleCard>
+
+<LinkTitleCard
+	title="Wrangler"
+	href="/workers/wrangler/commands/containers/#containers"
+	icon="seti:shell"
+>
+	CLI commands for images and containers.
+</LinkTitleCard>
+
+<LinkTitleCard
+	title="Durable Object Container API"
+	href="/durable-objects/api/container/"
+	icon="seti:json"
+>
+	Start, stop, and talk to the container process from a Durable Object.
+</LinkTitleCard>
+
+<LinkTitleCard title="SSH" href="/containers/guides/ssh/" icon="terminal">
+	Connect to running container instances with SSH through Wrangler.
+</LinkTitleCard>
+
+<LinkTitleCard
+	title="Containers Discord"
+	href="https://discord.cloudflare.com"
+	icon="discord"
+>
+	Ask questions, show what you are building, and talk with other Containers developers.
+</LinkTitleCard>
+
+</CardGrid>

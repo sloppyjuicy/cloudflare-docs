@@ -1,0 +1,28 @@
+version: 2
+updates:
+  - package-ecosystem: "npm"
+    directory: "/"
+    versioning-strategy: "increase"
+    commit-message:
+      prefix: "[Docs Site] "
+    schedule:
+      interval: "weekly"
+      day: "tuesday"
+    cooldown:
+      default-days: 1
+    assignees:
+      - "kodster28"
+      - "mvvmm"
+    reviewers:
+      - "cloudflare/content-engineering"
+    ignore:
+      - dependency-name: "mermaid"
+    groups:
+      non-major:
+        update-types:
+          - "minor"
+          - "patch"
+        patterns:
+          - "*"
+        exclude-patterns:
+          - "@cloudflare/nimbus-docs"

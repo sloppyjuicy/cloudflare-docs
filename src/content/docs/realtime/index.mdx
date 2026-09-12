@@ -1,0 +1,102 @@
+---
+title: Cloudflare Realtime
+description: Build scalable real-time applications with Cloudflare Realtime products including RealtimeKit, SFU, and TURN.
+pcx_content_type: overview
+sidebar:
+  order: 1
+head:
+  - tag: title
+    content: Overview
+products:
+  - realtime
+---
+
+import {
+	Description,
+	RelatedProduct,
+	CardGrid,
+	LinkTitleCard,
+} from "~/components";
+
+<Description>
+
+Build live audio, video, and data applications with managed Realtime products.
+
+</Description>
+
+### RealtimeKit
+
+[RealtimeKit](/realtime/realtimekit/) is a set of SDKs and APIs that lets you add customizable live video and voice to web or mobile applications. It is fully customisable and lets you set up in just a few lines of code.
+
+It sits on top of the Realtime SFU, abstracting away the heavy lifting of media routing, peer management, and other complex WebRTC operations.
+
+### Realtime SFU
+
+The [Realtime SFU (Selective Forwarding Unit)](/realtime/sfu/) routes WebRTC audio, video, and DataChannels between application endpoints.
+
+Use Realtime SFU when your application needs custom media routing, signaling, state, permissions, or user interfaces. Common topologies include custom calls, interactive broadcasts, AI media pipelines, cloud gaming, device control, and media processing.
+
+Your application backend keeps the Realtime SFU credentials and decides which sessions can publish, subscribe, or control resources.
+
+### TURN Service
+
+The [TURN service](/realtime/turn/) is a managed service that acts as a relay for WebRTC traffic. It ensures connectivity for users behind restrictive firewalls or NATs by providing a public relay point for media streams.
+
+## Choose the right Realtime product
+
+Use this comparison table to quickly find the right Realtime product for your needs:
+
+|                              | **RealtimeKit**                                                                | **Realtime SFU**                                                                                        | **TURN Service**                                                            |
+| ---------------------------- | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| **Choose it when**           | You want meeting SDKs, participant management, and pre-built UI components.    | You want to compose WebRTC media and data into a custom application topology.                           | You need a relay for peer-to-peer or self-hosted WebRTC connections.        |
+| **Provides**                 | Meetings, participants, presets, stage management, and UI components.          | Sessions, media tracks, DataChannels, and programmable publish and subscribe operations.                | TURN allocations and relayed UDP, TCP, or TLS transport.                    |
+| **Your application manages** | Product integration, branding, and application-specific behavior.              | Authentication, authorization, signaling, presence, state, and track discovery.                         | Peer connections, signaling, media routing, and application state.          |
+| **Example outcomes**         | Meetings, classrooms, webinars, and social video.                              | Custom calls, interactive broadcasts, AI pipelines, cloud gaming, device control, and media processing. | Connectivity through restrictive firewalls and network address translation. |
+| **Pricing**                  | Pricing by minute [view details](https://workers.cloudflare.com/pricing#media) | $0.05/GB egress                                                                                         | Free when used with Realtime SFU, otherwise $0.05/GB egress                 |
+| **Free tier**                | None                                                                           | First 1,000 GB free each month                                                                          | First 1,000 GB free each month                                              |
+
+## Related products
+
+<RelatedProduct header="Workers AI" href="/workers-ai/" product="workers-ai">
+
+Run machine learning models, powered by serverless GPUs, on Cloudflare’s global network.
+
+</RelatedProduct>
+
+<RelatedProduct header="Stream" href="/stream/" product="stream">
+
+Cloudflare Stream lets you or your end users upload, store, encode, and deliver live and on-demand video with one API, without configuring or maintaining infrastructure.
+
+</RelatedProduct>
+
+## More resources
+
+<CardGrid>
+
+<LinkTitleCard
+	title="Developer Discord"
+	href="https://discord.cloudflare.com"
+	icon="discord"
+>
+	Connect with the Realtime community on Discord to ask questions, show what you
+	are building, and discuss the platform with other developers.
+</LinkTitleCard>
+
+<LinkTitleCard
+	title="Build with Realtime SFU"
+	href="/realtime/sfu/#what-you-can-build"
+	icon="document"
+>
+	Explore custom media and data application topologies.
+</LinkTitleCard>
+
+<LinkTitleCard
+	title="@CloudflareDev"
+	href="https://x.com/cloudflaredev"
+	icon="x.com"
+>
+	Follow @CloudflareDev on Twitter to learn about product announcements, and
+	what is new in Cloudflare Realtime.
+</LinkTitleCard>
+
+</CardGrid>

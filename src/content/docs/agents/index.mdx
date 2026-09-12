@@ -1,0 +1,76 @@
+---
+title: Build Agents on Cloudflare
+description: Create stateful AI agents with persistent memory, real-time WebSocket connections, and scheduled tasks using the Cloudflare Agents SDK.
+pcx_content_type: overview
+tags:
+  - AI
+sidebar:
+  order: 1
+head:
+  - tag: title
+    content: Agents
+---
+
+import {
+	AgentsPlatformDiagram,
+	RelatedProduct,
+} from "~/components";
+
+Build and host Agents on Cloudflare, connect chat, voice, email, Slack, and webhooks to a durable agent runtime with Browser, Sandbox, AI Search, MCP, Payments, and other MCP tools.
+
+When you host agents on Cloudflare, each agent session has a durable identity, local SQL storage, real-time connections, scheduled work, and recoverable execution.
+
+Deploy once and Cloudflare runs your agents across its global network, scaling to tens of millions of instances. No infrastructure to manage, no sessions to reconstruct, no state to externalize.
+
+<AgentsPlatformDiagram />
+
+Agents on Cloudflare are composed from four parts:
+
+- **Communication channels** define how users and systems reach your agent, such as [chat](/agents/communication-channels/chat/), [voice](/agents/communication-channels/voice/), [email](/agents/communication-channels/email/), [Slack](/agents/communication-channels/slack/), [webhooks](/agents/communication-channels/webhooks/), and other event sources.
+- **The agent harness** defines the loop: how the agent calls models, selects tools, handles tool results, streams responses, and decides whether to continue. Use [Project Think](/agents/harnesses/think/) for an opinionated harness, or build your own loop directly on the [Agents SDK runtime](/agents/runtime/agents-api/).
+- **The Agents SDK runtime** provides durable infrastructure: the [`Agent` class](/agents/runtime/lifecycle/agent-class/), [state](/agents/runtime/lifecycle/state/), [sessions](/agents/runtime/lifecycle/sessions/), [routing](/agents/runtime/communication/routing/), [WebSockets](/agents/runtime/communication/websockets/), [scheduling](/agents/runtime/execution/schedule-tasks/), [fibers](/agents/runtime/execution/durable-execution/), and [observability](/agents/runtime/operations/observability/).
+- **Tools** give the agent capabilities: [browser automation](/agents/tools/browser/), [sandboxed code execution](/agents/tools/sandbox/), [AI Search](/agents/tools/ai-search/), [MCP tools](/agents/tools/mcp/), and [payments](/agents/tools/payments/). [Code Mode](/agents/tools/codemode/) lets models discover and orchestrate multiple tools by writing code.
+
+### Get started
+
+Three commands to a running agent. No API keys required — the starter uses [Workers AI](/workers-ai/) by default.
+
+```sh
+npx create-cloudflare@latest --template cloudflare/agents-starter
+cd agents-starter && npm install
+npm run dev
+```
+
+The starter includes streaming AI chat, server-side and client-side tools, human-in-the-loop approval, and task scheduling — a foundation you can build on or tear apart. You can also swap in [OpenAI, Anthropic, Google Gemini, or any other provider](/agents/runtime/operations/using-ai-models/).
+
+### Example agents
+
+<RelatedProduct header="Chat agent" href="/agents/examples/chat-agent/" product="workers-ai">
+
+Build a streaming AI chat agent with tools and human-in-the-loop approvals.
+
+</RelatedProduct>
+
+<RelatedProduct header="Slack agent" href="/agents/examples/slack-agent/" product="agents">
+
+Build an agent that responds to Slack messages, mentions, and commands.
+
+</RelatedProduct>
+
+<RelatedProduct header="Voice agent" href="/agents/examples/voice-agent/" product="stream">
+
+Build a real-time voice agent with speech-to-text and text-to-speech.
+
+</RelatedProduct>
+
+<RelatedProduct header="Browser agent" href="/agents/examples/browser-agent/" product="browser-run">
+
+Build an agent that can inspect pages, capture screenshots, and use browser tools.
+
+</RelatedProduct>
+
+<RelatedProduct header="Email agent" href="/agents/examples/email-agent/" product="email-routing">
+
+Build an agent that sends, receives, routes, and replies to email.
+
+</RelatedProduct>
